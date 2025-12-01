@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09EDBC29-4176-47EE-A5EC-C5F9DAE0ADF4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StaffPro_V1._0</RootNamespace>
+    <AssemblyName>StaffPro V1.0</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\b\Desktop\Rapport de stage\setup\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8-employé-100.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.38.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.38\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acceuil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acceuil.Designer.cs">
+      <DependentUpon>Acceuil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connexion.Designer.cs">
+      <DependentUpon>Connexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DashBoard.Designer.cs">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataDashboard.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDashboard.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataDepartement.cs" />
+    <Compile Include="DataEmploye.cs" />
+    <Compile Include="DataSalaire.cs" />
+    <Compile Include="Departement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Departement.Designer.cs">
+      <DependentUpon>Departement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="diagramme_1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>diagramme_1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Employe.cs" />
+    <Compile Include="Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscription.Designer.cs">
+      <DependentUpon>Inscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liste.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Liste.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ListeDepartement.cs">
+      <DependentUpon>ListeDepartement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ListeDepartement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListeDepartement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recrutement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Recrutement.Designer.cs">
+      <DependentUpon>Recrutement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Salaire.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Salaire.Designer.cs">
+      <DependentUpon>Salaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sanction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sanction.Designer.cs">
+      <DependentUpon>Sanction.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Acceuil.resx">
+      <DependentUpon>Acceuil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connexion.resx">
+      <DependentUpon>Connexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Departement.resx">
+      <DependentUpon>Departement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscription.resx">
+      <DependentUpon>Inscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Recrutement.resx">
+      <DependentUpon>Recrutement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salaire.resx">
+      <DependentUpon>Salaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sanction.resx">
+      <DependentUpon>Sanction.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataDashboard.xsc">
+      <DependentUpon>DataDashboard.xsd</DependentUpon>
+    </None>
+    <None Include="DataDashboard.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDashboard.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataDashboard.xss">
+      <DependentUpon>DataDashboard.xsd</DependentUpon>
+    </None>
+    <None Include="diagramme_1.xsc">
+      <DependentUpon>diagramme_1.xsd</DependentUpon>
+    </None>
+    <None Include="diagramme_1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>diagramme_1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="diagramme_1.xss">
+      <DependentUpon>diagramme_1.xsd</DependentUpon>
+    </None>
+    <None Include="Liste.xsc">
+      <DependentUpon>Liste.xsd</DependentUpon>
+    </None>
+    <None Include="Liste.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Liste.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Liste.xss">
+      <DependentUpon>Liste.xsd</DependentUpon>
+    </None>
+    <None Include="ListeDepartement.xsc">
+      <DependentUpon>ListeDepartement.xsd</DependentUpon>
+    </None>
+    <None Include="ListeDepartement.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListeDepartement.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ListeDepartement.xss">
+      <DependentUpon>ListeDepartement.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\croix-cercle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StaffPro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajout-dutilisateur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enveloppe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-utilisateur-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloquer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verrouillage-de-lutilisateur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-connexion-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer %283%29.png" />
+    <None Include="Resources\icons8-tableau-de-bord-64%281%29.png" />
+    <None Include="Resources\icons8-tableau-de-bord-32.png" />
+    <None Include="Resources\ajouter.png" />
+    <None Include="Resources\employe.png" />
+    <None Include="Resources\off-button.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\money-bag %286%29.png" />
+    <None Include="Resources\icons8-money-transfer-50.png" />
+    <None Include="Resources\icons8-payroll-50.png" />
+    <None Include="Resources\icons8-money-transfer-501.png" />
+    <None Include="Resources\money.png" />
+    <None Include="Resources\money-bag.png" />
+    <None Include="Resources\salaire-utilisateur.png" />
+    <None Include="Resources\salaire.png" />
+    <None Include="Resources\icons8-interdit-50.png" />
+    <None Include="Resources\nouvel-employe.png" />
+    <None Include="Resources\icons8-employé-50.png" />
+    <None Include="Resources\integration-de-donnees.png" />
+    <None Include="Resources\icons8-panneau-de-contrôle-64.png" />
+    <None Include="Resources\icons8-macbook-de-performance-50.png" />
+    <None Include="Resources\icons8-ajouter-un-utilisateur-homme-50.png" />
+    <None Include="Resources\icons8-argent-30.png" />
+    <None Include="Resources\icons8-déconnexion-50.png" />
+    <None Include="Resources\icons8-tableau-de-bord-64.png" />
+    <None Include="Resources\icons8-employé-100.png" />
+    <None Include="Resources\icons8-employé-1001.png" />
+    <None Include="Resources\pexels-francesco-ungaro-281260.jpg" />
+    <None Include="Resources\pexels-ironic-695657.jpg" />
+    <None Include="Resources\icons8-département-50.png" />
+    <None Include="Resources\icons8-name-tag-50.png" />
+    <None Include="Resources\icons8-employé-64.png" />
+    <None Include="Resources\ouvrier.png" />
+    <None Include="Resources\supprimer-lutilisateur %281%29.png" />
+    <None Include="Resources\ajouter1.png" />
+    <None Include="Resources\icons8-plus-50.png" />
+    <None Include="Resources\icons8-plus-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BD_StaffPro.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BD_StaffPro_log.ldf">
+      <DependentUpon>BD_StaffPro.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\pexels-ironic-6956571.jpg" />
+    <None Include="Resources\refreshing.png" />
+    <None Include="Resources\pexels-ironic-6956572.jpg" />
+    <None Include="Resources\icons8-settings-50.png" />
+    <None Include="Resources\icons8-settings-501.png" />
+    <Content Include="employee_business_tags_name_resource_human_management_people_team_icon_259226.ico" />
+    <Content Include="icons8-employé-100.ico" />
+    <None Include="Resources\notification4_icon-icons.com_73708.ico" />
+    <None Include="Resources\Print_icon-icons.com_55835 %281%29.png" />
+    <None Include="Resources\Print_icon-icons.com_55835.png" />
+    <Content Include="SQLQuery1.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="BD_StaffPro.mdf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="BD_StaffPro_log.ldf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="SQLQuery1.sql">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

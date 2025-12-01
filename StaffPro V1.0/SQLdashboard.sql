@@ -1,0 +1,1 @@
+﻿select NomEmploye, PosteEmploye, Departement, DateInsertion from employe where DateInsertion between '2024/08/12' and '2024/12/12';
